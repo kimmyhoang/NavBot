@@ -3,7 +3,7 @@
 <package format="3">
   <name>navbot</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>navigation bot</description>
   <maintainer email="k32hoang@uwaterloo.com">Kim Hoang</maintainer>
   <license>TODO: License declaration</license>
 
