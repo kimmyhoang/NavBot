@@ -1,0 +1,147 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box</name>
+      <pose>1.5757700204849243 1.1923500299453735 0.14999900262897667 1.5492129327212551e-20 7.6931943498992854e-19 -0.50178632596263795</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_0</name>
+      <pose>2.9342200756072998 -0.30460599064826965 0.1499990026289767 -6.4300497558097422e-19 3.5155571029215531e-19 0.44931527317652409</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_1</name>
+      <pose>0.13501174070460742 1.6856166639955017 0.14999943493130527 3.7462915760203949e-19 6.4750740117597359e-19 -1.1822235418646911e-21</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_2</name>
+      <pose>2.6905133464871245 1.6550470451432737 0.14999943493130527 3.7462915760203949e-19 6.4750740117597359e-19 -1.1822235418646911e-21</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_3</name>
+      <pose>3.6850399971008301 0.54296201467514038 0.14999900262897667 9.4274009441800343e-19 2.0765857965208107e-18 1.9518801834914752</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_4</name>
+      <pose>0.47268900275230408 -1.0279999971389771 0.14999900262897667 -7.3433999759783653e-19 -4.3535381143972542e-21 -2.0920930710683194</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_5</name>
+      <pose>3.6061591977136009 -1.1614407840576715 0.14999943493130527 3.7462915760203949e-19 6.4750740117597359e-19 -1.1822235418646911e-21</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_6</name>
+      <pose>1.123556305817123 -2.0489172965207509 0.14999943493130527 -1.1247138104503017e-18 -1.0947243214507017e-18 2.7239870645799537e-21</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_7</name>
+      <pose>3.2612600326538086 -1.9133499860763545 0.14999900262897667 -1.3418418831173743e-18 8.1151825903417753e-19 1.3148858219999953</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_8</name>
+      <pose>1.4076000452041626 -3.1289300918579102 0.14999900262897667 -1.6825783911232956e-19 -5.4989386139737064e-19 0.48928707613674383</pose>
+    </include>
+    <include>
+      <uri>file:///home/kimmy/.gz/fuel/fuel.gazebosim.org/openrobotics/models/cardboard box/3</uri>
+      <name>cardboard_box_9</name>
+      <pose>4.3299999237060547 -3.2955899238586426 0.14999900262897667 3.813180235100935e-19 -4.4487738425644081e-19 -0.51337571161573725</pose>
+    </include>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
